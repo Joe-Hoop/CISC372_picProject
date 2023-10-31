@@ -180,7 +180,8 @@ int main(int argc, char **argv)
 
     struct arg_struct *args;
     args = (struct arg_struct *)malloc(thread_count * sizeof(struct arg_struct));
-    for (int i = 0; i < thread_count; i++)
+    int i;
+    for (i = 0; i < thread_count; i++)
     {
         args[i].rank = i;
         args[i].srcImage = &srcImage;
@@ -188,7 +189,8 @@ int main(int argc, char **argv)
         args[i].algorithm = &algorithms[type];
         pthread_create(&thread_handles[i], NULL, &thread_convolute, (void *)&args[i]);
     }
-    for (int j = 0; j < thread_count; j++)
+    int j;
+    for (j = 0; j < thread_count; j++)
     {
         pthread_join(thread_handles[j], NULL);
     }
