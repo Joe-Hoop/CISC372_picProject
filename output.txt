@@ -1,0 +1,19 @@
+Script started on Mon Oct 30 21:09:31 2023
+[joeyhoop@r1n09 CISC372_picProject]$ srun ./openMP.o pic1.jpg edge
+Took 8 seconds
+[joeyhoop@r1n09 CISC372_picProject]$ srun ./pthreads.o pic1.jpg edge
+slurmstepd: error: execve(): /home/3300/CISC372_picProject/./pthreads.o: Exec format error
+srun: error: r1n09: task 0: Exited with exit code 8
+[joeyhoop@r1n09 CISC372_picProject]$ srun ./image.o pic1.jpg edge
+5
+Input How many threads:
+Rank: 2
+Rank: 0
+Rank: 1
+Rank: 3
+Rank: 4
+Took 10 seconds
+[joeyhoop@r1n09 CISC372_picProject]$ exit
+exit
+
+Script done on Mon Oct 30 21:10:24 2023
